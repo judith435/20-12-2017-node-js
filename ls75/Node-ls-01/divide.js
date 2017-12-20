@@ -6,7 +6,7 @@ function divide(x, y) {
 }
 
 // Block
-var res = divide(14, 2);
+var res = divide(1, 1);
 console.log(res);
 
 // Non block

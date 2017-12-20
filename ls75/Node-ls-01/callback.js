@@ -1,3 +1,4 @@
+
 var evenDouble = function(num, callback) {
     var timeWait = Math.random();
     if (num % 2 == 0) {
@@ -11,4 +12,5 @@ var evenDouble = function(num, callback) {
     }
 }
 
-module.exports = evenDouble;
+module.exports.evenDouble = evenDouble;
+module.exports.sayHello = function() { return 'Hello'};
