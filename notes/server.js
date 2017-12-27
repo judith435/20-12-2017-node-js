@@ -6,18 +6,20 @@ http.createServer(function (req, res) {
         'Content-Type': 'text/html'
     });
     
-    fs.readFile('C:\\20-12-2017-node.js\\notes.json', 'utf8', function (err, notes) {
+    fs.readFile('C:/20-12-2017-node-js/notes/notes.json', 'utf8', function (err, notes) {
         if (err) {
             return console.log(err);
         }
-        fs.readFile('base.html', 'utf8', function (err, html) {
+        fs.readFile('C:/20-12-2017-node-js/notes/base.html', 'utf8', function (err, html) {
             if (err) {
                 return console.log(err);
             }
             var memos = JSON.parse(notes);
-            var divs;
+            var divs = '';
             for (let i = 0; i < memos.length; i++) { 
-                divs += '<div>' + memos[i].content + '</div>';
+                divs +=  '<div>' + '<p>' + memos[i].date + '</p>' 
+                                 + '<p>' + memos[i].time + '</p>' 
+                                 + '<p>' + memos[i].content + '</p>'  + '</div><br>';
             } 
             html += divs;
             html += '</body></html>';
@@ -25,4 +27,4 @@ http.createServer(function (req, res) {
         });
     });
 
-}).listen(2222);
+}).listen(4321);
