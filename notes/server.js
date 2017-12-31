@@ -6,11 +6,11 @@ http.createServer(function (req, res) {
         'Content-Type': 'text/html'
     });
     
-    fs.readFile('C:/20-12-2017-node-js/notes/notes.json', 'utf8', function (err, notes) {
+    fs.readFile('C:/nodeJS/20-12-2017-node-js/notes/notes.json', 'utf8', function (err, notes) {
         if (err) {
             return console.log(err);
         }
-        fs.readFile('C:/20-12-2017-node-js/notes/base.html', 'utf8', function (err, html) {
+        fs.readFile('C:/nodeJS/20-12-2017-node-js/notes/base.html', 'utf8', function (err, html) {
             if (err) {
                 return console.log(err);
             }
@@ -27,4 +27,4 @@ http.createServer(function (req, res) {
         });
     });
 
-}).listen(4321);
+}).listen(5432);
